@@ -36,7 +36,7 @@ let countriesData = [];
 // Fetching data from Json
 const fetchingData = async () => {
     try {
-        const getData = await fetch("./Js/data.json");
+        const getData = await fetch("Js/data.json");
         countriesData = await getData.json();
         displayCountries(countriesData);
     } catch (error) {

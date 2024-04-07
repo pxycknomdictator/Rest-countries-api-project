@@ -5,7 +5,7 @@ const borders = document.getElementById("bordercountry")
 // Fetching Data
 
 const fetchedData = async () => {
-    const getData = await fetch(`./Js/data.json`);
+    const getData = await fetch(`Js/data.json`);
     const response = await getData.json();
 
     const country = response.find(country => country.name === queryname.get("name"));
