@@ -47,7 +47,7 @@ const fetchingData = async () => {
 const displayCountries = (data) => {
     CardContainer.innerHTML = "";
     data.forEach(country => {
-        const singleCard = `<a href="country.html?name=${country.name}" class="block rounded-br-md rounded-bl-md dark:bg-header dark:text-white shadow-lg dark:shadow-none">
+        const singleCard = `<a href="./country.html?name=${country.name}" class="block rounded-br-md rounded-bl-md dark:bg-header dark:text-white shadow-lg dark:shadow-none">
             <div class="w-full">
                 <img class="w-full overflow-hidden rounded-tr-md rounded-tl-md" src="${country.flags.svg}" alt="${country.name}-flag">
             </div>
