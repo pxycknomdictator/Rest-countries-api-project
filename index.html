@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries Api Webiste</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <script defer src="/Js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="dark:bg-body">
+
+    <header class=" dark:bg-header shadow-md">
+
+        <div class="w-[85%] mx-auto bg-white dark:bg-header flex items-center justify-between py-4 flex-col mysm:flex-row gap-3">
+            <div>
+                <h1 class="text-2xl font-semibold dark:text-white">Where in the world?</h1>
+            </div>
+            <div id="toggle" class="cursor-pointer">
+                <i class="mr-2 fa-solid fa-moon dark:text-white"></i>
+                <button class="font-semibold dark:text-white">Dark Mode</button>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="w-[85%] mx-auto mt-10">
+
+        <section class="flex justify-between flex-col items-start gap-4 md:flex-row">
+
+            <div class="flex w-full md:w-96 shadow-md rounded-md dark:bg-header">
+                <div class="py-3 rounded-md flex items-center justify-center w-10">
+                    <i id="search" class="text-darkgray fa-solid fa-magnifying-glass dark:text-white cursor-pointer"></i>
+                </div>
+                <input id="searchbar" class="w-96 dark:bg-header focus:outline-none rounded-md dark:placeholder:text-white dark:text-white" type="search" placeholder="Search for a country...">
+            </div>
+
+            <div class="dark:text-white relative cursor-pointer shadow-sm dark:shadow-none">
+                <span id="dropdownButton" class="dark:bg-header px-5 py-3 font-semibold flex justify-between items-center rounded-md shadow-md dark:shadow-none">Filter
+                    by Region<i id="icon" class="ml-10 fa-solid fa-caret-down"></i></span>
+                <ul id="dropdown"
+                    class="z-30 bg-white dark:bg-header pl-5 w-52 py-3 mt-2 rounded-md absolute shadow-lg dark:shadow-none hidden">
+                    <li class="py-1">Africa</li>
+                    <li class="py-1">America</li>
+                    <li class="py-1">Asia</li>
+                    <li class="py-1">Europe</li>
+                    <li class="py-1">Oceania</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-10">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="card-container"></div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
