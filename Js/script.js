@@ -71,4 +71,12 @@ searchbar.addEventListener("input", () => {
     displayCountries(filteredCountries);
 });
 
+dropdown.addEventListener("click", (event) => {
+    const text = event.target.textContent.toLowerCase()
+    const filterregion = countriesData.filter((country) => {
+        return country.region.toLowerCase().includes(text)
+    });
+    displayCountries(filterregion)
+})
+
 fetchingData();
